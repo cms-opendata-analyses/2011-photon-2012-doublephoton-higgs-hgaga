@@ -139,11 +139,11 @@ fi
 for p in `seq 1 $NP`
 do
   command="time cmsRun analyzer_cfg.py ${OUTPUTDIR}/inputList${outrootsuffix}_${p}.txt ${OUTPUTDIR}/hggSel${outrootsuffix}_${p}.root ${reco} ${gen} ${mc} ${year}"
-  #nohup ${command} >& ${OUTPUTDIR}/log${outrootsuffix}_${p}.txt &
+  nohup ${command} >& ${OUTPUTDIR}/log${outrootsuffix}_${p}.txt &
   #
   # optionally submit jobs to cluster (if running not on VM): modify for your environment
   # HTCondor
-  cs -n${jobName}${p} "${command} >& ${OUTPUTDIR}/log${outrootsuffix}_${p}.txt"
+  #cs -n${jobName}${p} "${command} >& ${OUTPUTDIR}/log${outrootsuffix}_${p}.txt"
 done
 ########################################################################
 
