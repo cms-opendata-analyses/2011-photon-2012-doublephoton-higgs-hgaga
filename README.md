@@ -19,7 +19,7 @@ cd ./WorkingArea
 cmsrel CMSSW_5_3_32
 cd ./CMSSW_5_3_32/src
 cmsenv
-git clone git://github.com/christian512/2011-photon-2012-doublephoton-higgs-hgaga.git
+git clone git://github.com/cms-opendata-analyses/2011-photon-2012-doublephoton-higgs-hgaga.git
 scram b
 cd 2011-photon-2012-doublephoton-higgs-hgaga/Analyzer
 ln -sf /cvmfs/cms-opendata-conddb.cern.ch/FT_53_LV5_AN1_RUNA FT_53_LV5_AN1
