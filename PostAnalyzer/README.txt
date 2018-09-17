@@ -1,18 +1,21 @@
 This part processes ROOT ntuples (output of Analyzer, see 
-Analyzer/README.txt) to produce ROOT histograms (ttbarMakeHist.cxx) 
-and final plots and numbers from them (ttbarMakePlots.cxx).
+Analyzer/README.txt) to produce ROOT histograms (hggMakeHist.cxx) 
+and final plots and numbers from them (hggMakePlots.cxx).
 This is pure C++ and ROOT code: does not require CMSSW, works outside VM 
 (although it can work on VM also, of course).
 
 General description of contents (find further description inside the files):
    hggMakeHist.cxx: master file to produce histograms
-   eventReco.h: ttbar event reconstruction
-   selection.h: ttbar event selection
+   eventReco.h: Hgg event reconstruction
+   selection.h: Hgg event selection
    kinReco.h: kinematic reconstruction
    tree.h: tree structure of input ROOT ntuples
    settings.h: global settings (directory names)
    hggMakePlots.cxx: master file to produce final plots and numbers
    plots.h: helper file for plotting
+   lumi2011.txt: List of luminosities for 2011 data
+   lumi2012.txt: List of luminosities for 2012 data
+   lumicalc.py: Sums all the luminosities from txt-files for runs which are used in analysis
 
 To run the analysis, make sure input ntuples are in place, for default 
 directory structure you need to run from the root analysis directory:
